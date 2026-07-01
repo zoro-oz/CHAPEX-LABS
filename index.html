@@ -8,6 +8,7 @@
 </head>
 <body class="dark-theme">
 
+    <!-- شريط التنقل الاحترافي - يختفي فقط في صفحة الأدمن -->
     <header id="navbar">
         <div class="logo">
             <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -43,6 +44,7 @@
         </div>
     </header>
 
+    <!-- الواجهة الرئيسية للمستخدم (كاملة دون أي تغيير) -->
     <main id="main-view">
         <section id="home" class="hero">
             <div class="hero-content animate-fade-in">
@@ -80,9 +82,11 @@
         </section>
     </main>
 
+    <!-- 🌐 صفحة الإدارة المستقلة والمعزولة تماماً بكود مخصص وفصل كامل -->
     <div id="admin-view" class="hidden-view standalone-admin-page">
         <section class="admin-wrapper animate-fade-in">
             
+            <!-- صندوق تسجيل الدخول -->
             <div id="auth-box" class="glass-card modern-admin-card">
                 <div class="admin-header-icon">🔒</div>
                 <h2>System Authentication</h2>
@@ -98,6 +102,7 @@
                 <p id="auth-error-log" class="server-error"></p>
             </div>
 
+            <!-- لوحة التحكم الكاملة مع نظام الـ CRUD -->
             <div id="dashboard-box" class="glass-card dashboard-extended-card hidden-view">
                 <div class="dashboard-header">
                     <div>
@@ -151,6 +156,7 @@
                     </div>
                 </div>
 
+                <!-- جدول التعديل والحذف السفلي للمشرف -->
                 <div class="management-table-wrapper margin-top">
                     <h3 class="panel-section-title">Live Repository Log</h3>
                     <div class="table-scroll">
@@ -159,12 +165,11 @@
                                 <tr>
                                     <th>Type</th>
                                     <th>Title</th>
-                                    <th>Asset Attached</th>
+                                    <th>Asset</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
-                            <tbody id="admin-table-body">
-                                </tbody>
+                            <tbody id="admin-table-body"></tbody>
                         </table>
                     </div>
                 </div>
@@ -174,7 +179,7 @@
     </div>
 
     <footer>
-        <p>© 2026 CH-Apex Labs. <span>Founded by Hachem & Chahrazad</span></p>
+        <p>© 2026 CH-Apex Labs. <span data-i18n="footer-creators">Founded by Hachem & Chahrazad</span></p>
     </footer>
 
     <script src="script.js"></script>
