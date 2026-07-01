@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CH-Apex Labs | Future Tech</title>
+    <title>CH-Apex Labs | Enterprise Architecture</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-theme">
 
-    <!-- شريط التنقل المتجاوب -->
     <header id="navbar">
         <div class="logo">
             <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -20,18 +19,16 @@
             CH-APEX <span data-i18n="logo-sub">LABS</span>
         </div>
 
-        <!-- زر القائمة للهواتف -->
         <button class="menu-toggle" id="menu-toggle">☰</button>
 
         <nav id="nav-menu">
-            <div class="nav-bubble-wrapper"><a href="#home" data-i18n="nav-home">Home</a></div>
+            <div class="nav-bubble-wrapper"><a href="#" id="nav-home-link" data-i18n="nav-home">Home</a></div>
             <div class="nav-bubble-wrapper"><a href="#games" data-i18n="nav-games">Game Studio</a></div>
-            <div class="nav-bubble-wrapper"><a href="#dynamic-content" data-i18n="nav-updates">Updates & Achievements</a></div>
+            <div class="nav-bubble-wrapper"><a href="#dynamic-content" data-i18n="nav-updates">Updates</a></div>
             <div class="nav-bubble-wrapper"><a href="#cyber" data-i18n="nav-cyber">Cyber Labs</a></div>
-            <div class="nav-bubble-wrapper"><a href="#admin-section" id="admin-nav-link">🔒 Admin</a></div>
         </nav>
 
-        <div class="controls" id="nav-controls">
+        <div class="controls">
             <div class="nav-bubble-wrapper lang-dropdown-container">
                 <span id="current-lang-label">EN</span>
                 <ul class="lang-dropdown-menu">
@@ -46,89 +43,107 @@
         </div>
     </header>
 
-    <!-- البانر الرئيسي -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 data-i18n="hero-title">Innovating the Future of Gaming with AI</h1>
-            <p data-i18n="hero-desc">Merging artificial intelligence engineering with interactive gaming, secured by advanced cybersecurity solutions.</p>
-            <div class="nav-bubble-wrapper inline-bubble">
-                <a href="#games" class="btn-primary" data-i18n="hero-btn">Explore Projects</a>
+    <main id="main-view">
+        <section id="home" class="hero">
+            <div class="hero-content animate-fade-in">
+                <h1 data-i18n="hero-title">Innovating the Future of Gaming with AI</h1>
+                <p data-i18n="hero-desc">Merging artificial intelligence engineering with interactive gaming, secured by advanced cybersecurity solutions.</p>
+                <div class="nav-bubble-wrapper inline-bubble">
+                    <a href="#games" class="btn-primary" data-i18n="hero-btn">Explore Projects</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- قسم الألعاب وثابت استوديو الألعاب -->
-    <section id="games" class="features">
-        <h2 data-i18n="games-title">Smart Gaming Studio 🎮</h2>
-        <div class="cards-container">
-            <div class="card">
-                <h3 data-i18n="card1-title">Advanced AI Brains</h3>
-                <p data-i18n="card1-desc">Developing NPCs that learn from your playstyle and adapt to challenge you dynamically in real-time.</p>
+        <section id="games" class="features">
+            <h2 data-i18n="games-title">Smart Gaming Studio 🎮</h2>
+            <div class="cards-container">
+                <div class="card glass-card">
+                    <h3 data-i18n="card1-title">Advanced AI Brains</h3>
+                    <p data-i18n="card1-desc">Developing NPCs that learn from your playstyle and adapt to challenge you dynamically in real-time.</p>
+                </div>
+                <div class="card glass-card">
+                    <h3 data-i18n="card2-title">Generative Worlds</h3>
+                    <p data-i18n="card2-desc">Building procedural environments and levels that evolve infinitely using intelligent AI algorithms.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3 data-i18n="card2-title">Generative Worlds</h3>
-                <p data-i18n="card2-desc">Building procedural environments and levels that evolve infinitely using intelligent AI algorithms.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- قسم الإضافات الديناميكية (أخبار، مقالات، صور، إنجازات) -->
-    <section id="dynamic-content" class="features dynamic-section">
-        <h2 data-i18n="section-updates-title">Latest News & Achievements</h2>
-        <div class="cards-container" id="updates-container">
-            <!-- الكروت المضافة من لوحة التحكم تظهر هنا برمجياً -->
-        </div>
-    </section>
+        <section id="dynamic-content" class="features dynamic-section">
+            <h2 data-i18n="section-updates-title">Latest News & Releases</h2>
+            <div class="cards-container" id="updates-container"></div>
+        </section>
 
-    <!-- قسم السايبر -->
-    <section id="cyber" class="cyber-section">
-        <div class="cyber-badge" data-i18n="cyber-badge">Coming Soon</div>
-        <h2 data-i18n="cyber-title">Cybersecurity Labs 🔒</h2>
-        <p data-i18n="cyber-desc">We are working behind the scenes to engineer smart vulnerability scanners and AI-powered defense tools to secure the digital frontier.</p>
-    </section>
+        <section id="cyber" class="cyber-section">
+            <div class="cyber-badge" data-i18n="cyber-badge">Coming Soon</div>
+            <h2 data-i18n="cyber-title">Cybersecurity Labs 🔒</h2>
+            <p data-i18n="cyber-desc">We are working behind the scenes to engineer smart vulnerability scanners and AI-powered defense tools to secure the digital frontier.</p>
+        </section>
+    </main>
 
-    <!-- لوحة التحكم المحمية: Control Center -->
-    <section id="admin-section" class="admin-section">
-        <h2 data-i18n="admin-title">Control Center</h2>
-        
-        <!-- نموذج تسجيل الدخول للوحة التحكم -->
-        <div id="admin-login-box" class="card admin-box">
-            <h3 data-i18n="admin-login-head">Secure Admin Access</h3>
-            <div class="input-group">
-                <input type="text" id="admin-username" placeholder="User ID">
+    <div id="admin-view" class="hidden-view">
+        <section class="admin-wrapper animate-fade-in">
+            <div id="auth-box" class="glass-card modern-admin-card">
+                <div class="admin-header-icon">🔒</div>
+                <h2 data-i18n="admin-login-head">System Authentication</h2>
+                <div class="field-group">
+                    <input type="text" id="auth-user" required placeholder=" ">
+                    <label>User ID</label>
+                </div>
+                <div class="field-group">
+                    <input type="password" id="auth-pass" required placeholder=" ">
+                    <label>Security Password</label>
+                </div>
+                <button id="auth-submit-btn" class="btn-primary full-width">Verify Identity</button>
+                <p id="auth-error-log" class="server-error"></p>
             </div>
-            <div class="input-group">
-                <input type="password" id="admin-password" placeholder="Password">
-            </div>
-            <button id="btn-login" class="btn-primary" data-i18n="admin-login-btn">Login</button>
-            <p id="login-error" class="error-msg"></p>
-        </div>
 
-        <!-- لوحة الإدارة بعد نجاح تسجيل الدخول -->
-        <div id="admin-panel" class="card admin-panel-box hidden">
-            <h3 data-i18n="admin-panel-head">Publish New Content</h3>
-            <div class="input-group">
-                <select id="content-type" class="nav-bubble-wrapper dropdown-control spec-select">
-                    <option value="News">News / أخبار</option>
-                    <option value="Article">Article / مقال</option>
-                    <option value="Achievement">Achievement / إنجاز</option>
-                </select>
+            <div id="dashboard-box" class="glass-card modern-admin-card dashboard-card hidden-view">
+                <div class="dashboard-header">
+                    <h2>Terminal Control Center</h2>
+                    <button id="auth-logout-btn" class="btn-terminal-close">Terminate Session</button>
+                </div>
+                
+                <div class="panel-grid">
+                    <div class="form-panel">
+                        <div class="field-group">
+                            <select id="data-type" class="clean-select">
+                                <option value="Game Deploy">Game Deploy / رفع لعبة</option>
+                                <option value="Cyber Tool">Cyber Tool / أداة سيبرانية</option>
+                                <option value="Core Article">Core Article / مقال تقني</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="data-title" required placeholder=" ">
+                            <label>Content Title</label>
+                        </div>
+                        <div class="field-group">
+                            <textarea id="data-desc" required placeholder=" " rows="4"></textarea>
+                            <label>Detailed System Description</label>
+                        </div>
+                    </div>
+
+                    <div class="upload-panel">
+                        <div class="drop-zone" id="file-drop-zone">
+                            <span class="drop-zone-prompt">Drag & Drop Application Binaries (.exe, .apk, .zip) or Click to Browse</span>
+                            <input type="file" id="binary-file-input" class="drop-zone-file" multiple>
+                        </div>
+                        
+                        <div id="upload-progress-wrapper" class="progress-container hidden-view">
+                            <div class="progress-details">
+                                <span id="upload-file-name">payload.zip</span>
+                                <span id="upload-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                            </div>
+                        </div>
+
+                        <button id="data-publish-btn" class="btn-primary full-width margin-top">Execute Deployment</button>
+                    </div>
+                </div>
             </div>
-            <div class="input-group">
-                <input type="text" id="content-title" placeholder="Title (EN / FR / AR)">
-            </div>
-            <div class="input-group">
-                <input type="text" id="content-image" placeholder="Image URL (e.g., https://images.unsplash.com/...)">
-            </div>
-            <div class="input-group">
-                <textarea id="content-desc" rows="4" placeholder="Content details / Description"></textarea>
-            </div>
-            <div class="admin-actions">
-                <button id="btn-publish" class="btn-primary">Publish</button>
-                <button id="btn-logout" class="btn-secondary">Logout</button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer>
         <p>© 2026 CH-Apex Labs. <span data-i18n="footer-creators">Founded by Hachem & Chahrazad</span></p>
